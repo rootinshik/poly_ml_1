@@ -1,0 +1,10 @@
+venv/
+*.venv/
+env/
+*.env/
+
+*.doc*
+*.xlsx*
+
+*catboost_info
+*.ipynb_checkpoints
