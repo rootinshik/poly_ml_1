@@ -1,15 +1,11 @@
-name: Lint
-
+name: black-action
 on: [push, pull_request]
-
 jobs:
-  lint:
+  linter_name:
+    name: runner / black formatter
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: psf/black@stable
+      - uses: rickstaa/action-black@v1
         with:
-            options: "--check --verbose"
-            src: "./labs"
-            jupyter: true
-            version: "~= 22.0"
+          black_args: "./labs"
