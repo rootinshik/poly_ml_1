@@ -219,14 +219,14 @@ def e():
 
     gammas = [0.1, 1, 10, 100]
     for gamma in gammas:
-        model = SVC(kernel="rbf", gamma=gamma)
+        model = SVC(kernel="sigmoid", gamma=gamma)
         model.fit(X_train_scaled, y_train)
         plot_decision_boundary(
             model,
             X_test_scaled,
             y_test,
-            f"RBF SVM с gamma={gamma}",
-            path_to_save=f"./pics/4/e/RBF_SVM_gamma_{gamma}.png",
+            f"sigmoid SVM с gamma={gamma}",
+            path_to_save=f"./pics/4/e/linear_SVM_gamma_{gamma}.png",
         )
 
 

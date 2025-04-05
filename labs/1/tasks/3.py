@@ -99,7 +99,7 @@ def main():
         "train_error",
         "test_error",
         "Ошибка",
-        "Зависимость Точности (Accuracy) от количества соседей",
+        "Зависимость ошибки (1 - Accuracy) от количества соседей",
     )
 
     best_n = int(accuracy_df.loc[accuracy_df["test_acc"].idxmax()]["n"])

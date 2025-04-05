@@ -39,9 +39,9 @@ def generate_data(
 
 
 def main():
-    df = generate_data(perc_pos=0.37)
+    df = generate_data(perc_pos=.6)
     print("Проверка распределения:")
-    print(df.groupby("target").agg(["mean", "count"]))
+    print(df.groupby("target").agg(["mean", "std", "count"]))
 
     for class_ in df["target"].unique():
         class_df = df.query(f"target == {class_}")
