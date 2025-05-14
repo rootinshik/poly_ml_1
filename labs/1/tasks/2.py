@@ -39,7 +39,7 @@ def generate_data(
 
 
 def main():
-    df = generate_data(perc_pos=.6)
+    df = generate_data(perc_pos=0.6)
     print("Проверка распределения:")
     print(df.groupby("target").agg(["mean", "std", "count"]))
 
